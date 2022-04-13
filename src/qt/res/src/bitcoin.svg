@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ sodipodi:docname="bitcoin-logo-noshadow.svg"
+ inkscape:version="0.48.2 r9819"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:cc="http://creativecommons.org/ns#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:svg="http://www.w3.org/2000/svg"
+ xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+ xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+ enable-background="new 0 0 1024 1024">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:url(#id0)}
+   ]]>
+  </style>
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0028 -0 -0 1.00282 -29 -42)" cx="10499" cy="14850" r="10763" fx="10499" fy="14850">
+   <stop offset="0" style="stop-opacity:1; stop-color:#1A70AD"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#0648A3"/>
+  </radialGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <filter id="dropShadowAlpha">
+   <feColorMatrix result="matrixOut" in="SourceAlpha" type="saturate" values="0.1"/>
+   <feGaussianBlur in="matrixOut" result="blur-out" stdDeviation="6"/>
+   <feColorMatrix in="blur-out" result="color-out" type="matrix" values="0 0 0 0   0
+		              0 0 0 0   0 
+		              0 0 0 0   0 
+		              0 0 0 0.35 0"/>
+   <feBlend in="SourceGraphic" in2="color-out" mode="normal"/>
+  </filter>
+  <path class="fil0" d="M13390 3249c-6405,-1597 -12894,2302 -14490,8709 -1598,6406 2301,12895 8705,14492 6407,1598 12896,-2301 14493,-8708 1597,-6407 -2301,-12896 -8708,-14494zm2758 14395c0,1565 -551,2897 -1653,3996 -1096,1098 -2422,1649 -3980,1653l-16 0 -1 0c-334,0 -619,-118 -854,-355 -237,-236 -355,-522 -355,-856 0,-334 118,-620 355,-856 236,-237 522,-355 856,-355l33 0c876,-8 1627,-322 2249,-945 630,-630 945,-1392 945,-2283l0 -5738c-17,-850 -331,-1580 -945,-2195 -631,-631 -1392,-945 -2283,-945 -891,0 -1653,314 -2283,945 -631,631 -945,1392 -945,2283 0,891 314,1653 945,2283 630,630 1392,945 2283,945 294,0 574,-35 841,-104 124,-42 257,-64 399,-64 334,0 619,118 856,355 236,235 353,521 353,855 0,334 -118,619 -353,855 -147,147 -312,247 -495,303l0 6c-504,144 -1037,215 -1601,215 -1565,0 -2897,-551 -3996,-1653 -1102,-1100 -1653,-2432 -1653,-3996 0,-1565 551,-2897 1653,-3996 1100,-1102 2432,-1653 3996,-1653 1565,0 2897,551 3996,1653 1102,1100 1653,2432 1653,3996l0 5649zm-10641 4430c0,354 125,656 374,905 251,251 553,376 907,376 353,0 656,-125 905,-376 251,-249 376,-551 376,-905 0,-353 -125,-656 -376,-905 -249,-251 -551,-376 -905,-376 -353,0 -656,125 -907,376 -249,249 -374,551 -374,905z" filter="url(#dropShadowAlpha)"/>
+ </g>
+</svg>

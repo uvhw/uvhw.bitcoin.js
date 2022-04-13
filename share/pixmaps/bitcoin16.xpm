@@ -1,0 +1,39 @@
+/* XPM */
+static char *bitcoin16_xpm[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16       16            1",
+/* colors */
+"` c #04063c",
+". c #8b8685",
+"# c #234583",
+"a c #615a4f",
+"b c #2a3445",
+"c c #054cb0",
+"d c #dad4d2",
+"e c #042a8c",
+"f c #6d7397",
+"g c #bfb8c7",
+"h c #fcfdfb",
+"i c #071971",
+"j c #3d4455",
+"k c #887c7f",
+"l c #0a398f",
+"m c #62638a",
+/* pixels */
+"hhhhd.ajja.dhhhh",
+"hhh.b#celclb.hhh",
+"hhabcli##ilcbahh",
+"h.bclighhgilc#.h",
+"dbccedhfmhdiccbd",
+"k#cemhji`jhfic#k",
+"alci.hiecehfecca",
+"jccl#h.iiehfeclj",
+"jclcikhddkhficcb",
+"alcccimggjh.icca",
+"klccceii`jhmec#k",
+"dbcclf##.hdiccbd",
+"h.bcehffhgiecbkh",
+"hhabcll#licc#ahh",
+"hhh.blcclclb.hhh",
+"hhhhd.abjakdhhhh"
+};
