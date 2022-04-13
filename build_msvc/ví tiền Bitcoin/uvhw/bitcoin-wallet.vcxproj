@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\common.init.vcxproj" />
+  <PropertyGroup Label="">
+    <ProjectGuid>{7374ac5d-5470-47e3-91f2-4158d069c153}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\bitcoin-wallet.cpp" />
+    <ClCompile Include="..\..\src\init\bitcoin-wallet.cpp">
+      <ObjectFileName>$(IntDir)init_bitcoin-wallet.obj</ObjectFileName>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libbitcoinconsensus\libbitcoinconsensus.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libbitcoin_common\libbitcoin_common.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libbitcoin_crypto\libbitcoin_crypto.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libbitcoin_util\libbitcoin_util.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libbitcoin_wallet\libbitcoin_wallet.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libunivalue\libunivalue.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libbitcoin_wallet_tool\libbitcoin_wallet_tool.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libsecp256k1\libsecp256k1.vcxproj">
+      <Project>{7374ac5d-5470-47e3-91f2-4158d069c153}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="..\common.vcxproj" />
+</Project>
