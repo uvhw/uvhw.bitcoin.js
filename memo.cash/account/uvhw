@@ -1,0 +1,40 @@
+Getting Started 
+Load jmemo.min.js
+<script src="jmemo.min.js"></script>
+
+Generate Private Key 
+Generate mnemonic
+var mnemonic = jmemo.Wallet.GenerateMnemonic();
+Get child key and address
+var child = jmemo.Wallet.GetHDChild(mnemonic, jmemo.Wallet.Path.MainAddressPath());
+var address = jmemo.Wallet.GetAddress(child.publicKey).address;
+
+Get API Token 
+var key;
+jmemo.Client.Api.Key.New(function(response) {
+    key = response;
+});
+
+Get API Fund Address
+var fundAddress;
+jmemo.Client.Basic.BalanceWithToken(address, key.token, key.secret, function(response) {
+    fundAddress = response.api_address;
+});
+Send funds to generated address and API fund address, 500,000-10,000,000 satoshis each is plenty
+
+Create Post 
+Create unsigned transaction (requires API and address have enough funds)
+var unsignedTx;
+jmemo.Client.Create.Post(key.token, key.secret, address, "Example", function(tx) {
+    unsignedTx = tx;
+});
+Sign transaction
+var signedTx = jmemo.Wallet.Sign.SignTx(unsignedTx.raw, child);
+Broadcast transaction
+jmemo.Client.Tx.Broadcast(signedTx.raw);
+View transaction
+location.href = "https://memo.cash/explore/tx/" + signedTx.hash;
+
+Use BSV 
+Set host name
+jmemo.Client.SetHost("https://v1.api.memo.sv");
