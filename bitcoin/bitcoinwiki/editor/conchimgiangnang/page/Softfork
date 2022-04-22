@@ -1,0 +1,38 @@
+A '''softfork''' is a change to the bitcoin protocol wherein only previously valid blocks/transactions are made invalid.
+Since old nodes will recognize the new blocks as valid, a softfork is backward-compatible.
+When a majority of miners upgrade to enforce new rules, it is called a '''miner-activated softfork''' (MASF). When full nodes coordinate to enforce new rules, without support from miners, it is called a '''user-activated softfork''' (UASF).
+
+New transaction types can often be added as softforks, requiring only that the participants (sender and receiver) and miners understand the new transaction type.
+This is done by having the new transaction appear to older clients as a "pay-to-anybody" transaction (of a special form), and getting the miners to agree to reject blocks including these transaction unless the transaction validates under the new rules.
+This is how [[pay to script hash]] and [[Segregated Witness]] were added to Bitcoin.
+
+Softforks can also be used to undo accidental hardforks. This is how [https://bitcoincore.org/en/2018/09/20/notice/ CVE-2018-17144] was fixed in Bitcoin Core 0.16.3.
+
+==Mechanism==
+
+Given a set of valid blocks, you can take any subset of those blocks and that subset will also, of course, all be valid. A softfork changes the rules such that only a subset of blocks that were previously valid remain so. Often softforks make certain transactions invalid, for example a softfork could make any transaction that is more than 1KB invalid (not that that would necessarily be desirable).
+
+Generally softforks accomplish something more useful, for example Pay-to-Script-Hash ([[P2SH]]) was a softfork. Originally the script <code>OP_HASH160 [20-byte-hash-value] OP_EQUAL</code> could be redeemed by simply pushing the preimage of the hashed value onto the stack. Now the value you push must be a script that evaluates to true. All new transactions with the script <code>OP_HASH160 [20-byte-hash-value] OP_EQUAL</code> weren't valid if they merely had a preimage of the hash pushed onto the stack, the preimage had to be a valid script. The requirement for the preimage being a valid script shrunk the set of valid transactions and added a feature at the same time.
+
+In the P2SH example, two opcodes were redefined so they had a new function. You can also add new opcodes that originally didn't do anything. Because the new rules must cause the set of valid blocks to be a proper subset of the valid blocks with the old rules, you must ensure that adding this new opcode doesn't cause transactions that were once invalid to be valid. In [[BIP_0012|BIP12]] <code>OP_EVAL</code> was proposed. To softfork this new opcode in, the proposal stated an opcode that previously didn't have any effect would be replaced. The script would be evaluated twice, once with the opcode having the new <code>OP_EVAL</code> behavior and once with its old behavior of doing nothing. The script being run with the old behavior of doing nothing would ensure that the transaction was valid to old clients.
+
+==Security==
+
+In order for a softfork to work, a majority of the mining power needs to be running a client recognizing the fork. The more miners that accept the new rules, the more secure the network is post-fork. If you have 3/4 of miners recognizing the fork, 1/4 blocks created aren't guaranteed to follow the new rules. These 1/4 blocks will be valid to old nodes that aren't aware of the new rules, but they will be ignored by new nodes. This allows a "fake confirmation" vulnerability, an attacker could create a transaction paying to their victim, but have it end up in a block not following new rules, they might bribe a miner to make the block incompatible with new rules or make the transaction itself incompatible. Because 3/4 the hashrate won't mine on top of the block, the block and the transaction paying to you will eventually not be in the "mainchain" allowing the attacker to attempt to [[Double-spending|doublespend]].
+
+These attacks can be avoided by upgrading your client, however if the vast majority of miners (>95%) accept the new rules, the odds of an attacker being able to create many fake confirmations is low. Because miners want to make money, and without upgrading their blocks may be reorged out, there is an incentive for miners to upgrade and 100% acceptance of a fork should be achieved by miners quickly.
+
+===2015 BIP66 Blockchain Fork===
+
+After the deployment of the BIP66 softfork in 2015 95% of hash power stated that they accepted BIP66 by setting their block version to 3. In theory setting your block version to 3 is an agreement with the network to consider version 2 blocks invalid and only mine on valid forks. Being part of the 5% that hadn't updated and weren't creating version 3 blocks, BTCNuggets created a version 2 block which was invalid to all new clients (>=0.9.5) but valid to old clients. Antminer and F2Pool, comprising ~40% of the network at the time, were creating version 3 blocks, however neither miner validated previous blocks. This caused both Antminer and F2Pool to mine on top of BTCNuggets version 2 block and create an invalid fork. Over 40% of the hashpower was mining on this version 2 fork despite 95% having "agreed" to not do so. This led to a 6 block fork that was resolved after contacting the F2Pool and Antminer pool owners.
+
+Any SPV clients or out of date clients were vulnerable to these fake confirmations and in theory there could have been a reversed 6 confirmation transaction. Fortunately there were zero doublespent confirmed transactions and the only money lost was mining revenue that these pools lost. F2Pool has continued mining without validating beforehand and SPV client as well as outdated full node clients are at an even higher risk as long as they do so.
+
+==Implications==
+
+Softforks don't require any nodes to upgrade to maintain consensus since all blocks with the new softforked in rules also follow the old rules, therefore old clients accept them. Softforks cannot be reversed without a hardfork since a softfork by definition only allows the set of valid blocks to be a proper subset of what was valid pre-fork.
+
+If users upgrade to a post-softfork client and for some reason a majority of miners switch back to the pre-softfork client, the post-softfork client users would break consensus as soon as a block came along that didn't follow their clients' new rules.
+
+==See Also==
+* [[Hardfork]]
