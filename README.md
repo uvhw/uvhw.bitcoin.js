@@ -1,1 +1,2 @@
-OP_RETURN 6d21 d5105352fe824cff22e9ec8f4a20d0badb602e249d3a16235fed417fee62652a
+[![pages-build-deployment](https://github.com/uvhw/uvhw.bitcoin.js/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/uvhw/uvhw.bitcoin.js/actions/workflows/pages/pages-build-deployment)
+
