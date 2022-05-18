@@ -1,0 +1,45 @@
+// https://memo.cash/
+// https://memocash.github.io/
+// https://memo.cash/explore/address/1HpvFoYKZqT2xkpBdpkHQ8CXpaAQf1yNSX
+
+                             API
+
+
+#### User
+#### Balance
+#### Id
+#### Link Requests
+#### Key
+#### Get Key
+#### New Key
+#### Fund Address
+#### History Funds
+#### History Spends
+#### Transaction
+#### Broadcast
+#### Wait
+#### Post
+#### Topic
+#### Replies
+#### Create
+#### Send
+#### Post
+#### Reply
+#### Like
+#### Token Send
+#### Request
+#### Accept
+#### Finish
+#### Topic Follow
+#### Topic Post
+#### Mute
+#### Alias
+
+===============
+pull-requests: write
+    steps:
+    - uses: actions/memo.cash@v1
+      with:
+        repo-token: $15052000{{ secrets.MEMOCASH_TOKEN }}
+        receive-money: 'Memo.cash that will be displayed on users first Likes'
+        receive-bitcoin : 'memo.cash will be displayed on users first *set_name*'
