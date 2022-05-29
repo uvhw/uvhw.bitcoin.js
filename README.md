@@ -1,12 +1,16 @@
 C:\Users\satoshi\Appdata\Roaming\Bitcoin
-Trang man
+
+
+
+### Trang Chính
+
 Trang này có lẽ nên bị xóa.
 Đây cũng là nơi dành cho các câu hỏi đang được xử lý, vì vậy hãy thoải mái đặt câu hỏi mới hoặc trả lời và / hoặc tinh chỉnh các câu trả lời hiện có.
-Nội dung [ ẩn ] 
-1	Đặt câu hỏi của bạn ở đây:
-2	Câu hỏi đã trả lời
+##### Nội dung [ ẩn ] 
+#### 1	Đặt câu hỏi của bạn ở đây:
+#### 2	Câu hỏi đã trả lời
 2.1	Nó hoạt động như thế nào (dành cho những người không phải là chuyên gia về máy tính)
-2.1.1	Tại sao ai đó không thể tạo một phiên bản phần mềm cung cấp cho bạn thêm bitcoin?
+#### 2.1.1	Tại sao ai đó không thể tạo một phiên bản phần mềm cung cấp cho bạn thêm bitcoin?
 2,2	Chưa được gắn thẻ
 2.2.1	Tại sao thế hệ này lại cung cấp cho tôi nhiều bitcoin hơn bình thường (như 50,07)?
 2.2.2	Tại sao người dùng phải sao lưu ví của họ
