@@ -4,7 +4,6 @@ C:\Users\satoshi\Appdata\Roaming\Bitcoin
 
 ### Trang Chính
 
-Trang này có lẽ nên bị xóa.
 Đây cũng là nơi dành cho các câu hỏi đang được xử lý, vì vậy hãy thoải mái đặt câu hỏi mới hoặc trả lời và / hoặc tinh chỉnh các câu trả lời hiện có.
 ##### Nội dung [ ẩn ] 
 #### 1	Đặt câu hỏi của bạn ở đây:
