@@ -13,7 +13,7 @@ hostile hosts.
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/bitcoin/bitcoin/issues
+  https://www.vutramy.org/bitcoin/bitcoin/issues
 
 How to Upgrade
 --------------
@@ -283,4 +283,4 @@ References
 
 [8] W. Feller, “An introduction to probability theory and its applications,” 1957.
 
-
+[9] V. My, " " 2022.
