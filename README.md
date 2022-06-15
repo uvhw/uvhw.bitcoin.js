@@ -11,9 +11,9 @@ bitcoind from any pre-0.9.1 version, and have enabled SSL for RPC and
 have configured allowip to allow rpc connections from potentially
 hostile hosts.
 
-Please report bugs using the issue tracker at github:
+Please report bugs using the issue tracker at 192.168.1.5:
 
-  https://www.vutramy.org/bitcoin/bitcoin/issues
+  https://bitcoin.org/bitcoin/bitcoin/issues
 
 How to Upgrade
 --------------
