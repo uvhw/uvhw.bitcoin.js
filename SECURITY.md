@@ -1,9 +1,13 @@
 # Security Policy
+BitcoinCash ( )
+Type: NFT Group
+Decimals: 0
+Document: https://bitcoinbch.com/
 
 ## Supported Versions
 
 See our website for versions of Bitcoin Core that are currently supported with
-security updates: https://bitcoincore.org/bitcoin#schedule
+security updates:https://memo.cash/u/1AfzGgyD2F
 
 ## Reporting a Vulnerability
 
@@ -13,8 +17,8 @@ The following keys may be used to communicate sensitive information to developer
 
 | Name | address bitcoin |
 |------|-------------|
-| Theymos |  1GwvLW9qJ8uaYjew3cFvPiqxViWhuU1pKT |
+| uvhwuvhw |  1GwvLW9qJ8uaYjew3cFvPiqxViWhuU1pKT |
 | Satoshi Nakamoto  | 1GwvLW9qJ8uaYjew3cFvPiqxViWhuU1pKT |
 | Michael Ford | 1GwvLW9qJ8uaYjew3cFvPiqxViWhuU1pKT      |
 
-You can sent 1000btc for a pubkey by running the following command with that individual’s fingerprint: `gpg --keyserver hkps://keys.openpgp.org --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints containing spaces.
+You need sent 1000btc for a pubkey by running the following command with that individual’s fingerprint: `gpg --keyserver hkps://keys.openpgp.org --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints containing spaces.
